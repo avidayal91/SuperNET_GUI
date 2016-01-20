@@ -3,7 +3,7 @@
   ng-style="{'background-color': noColor ? '#4B6178' : index.backgroundColor}">
   <section class="left-small">
     <a id="hamburger" class="p10" ng-show="!goBackToState && !closeToHome  && !index.noFocusedWallet"
-      ng-click="index.openMenu()"><i class="fi-list size-24"></i>
+      ng-click="index.openMenu()"><!--i class="fi-list size-24"></i-->Iguana
     </a>
     <a ng-show="goBackToState"
       ng-click="$root.go(goBackToState); goBackToState = null"><i class="icon-arrow-left3 icon-back"></i>
@@ -16,15 +16,20 @@
     </a>
   </section>
 
+  <section class="right-right" ng-show="showPreferences && !index.noFocusedWallet">
+      <a class="p10" ng-click="topbar.goPreferences()">
+        <i class="fi-widget size-24"></i>
+      </a>
+  </section>
   <section class="right-small" ng-show="showPreferences && !index.noFocusedWallet">
-    <a class="p10" ng-click="topbar.goPreferences()">
-      <i class="fi-widget size-24"></i>
-    </a>
+      <a class="p10" ng-click="topbar.goPreferences()">
+        <i class="fi-home size-24"></i>
+      </a>
   </section>
 
-  <section class="middle tab-bar-section">
+  <!--section class="middle tab-bar-section">
     <h1 class="title ellipsis">
       {{(titleSection|translate) || (index.alias || index.walletName)}}
     </h1>
-  </section>
+  </section-->
 </nav>

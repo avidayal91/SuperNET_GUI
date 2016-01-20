@@ -1930,12 +1930,22 @@ _:-ms-fullscreen, :root .main {
 
 .right-small {
   width: 4.7rem;
-  text-align: right;
+  text-align: center;
   line-height: 2.7rem;
   border-left: none;
 }
 
-.right-small a, .left-small a {
+.right-right{
+    width: 9.4rem;
+    text-align: center;
+    line-height: 2.7rem;
+    border-left: none;
+    position: absolute;
+    right: 9.4em;
+    top: 0px;
+}
+
+.right-small a, .left-small a , .right-right a{
   color: #FFFFFF;
 }
 
