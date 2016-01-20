@@ -808,6 +808,7 @@ ul.manage li {
 .pr {position: relative;}
 .pa {position: absolute;}
 .m0 {margin: 0;}
+.bw{border-bottom: 1px solid #E2E7ED;}
 .p0i {padding: 0 !important;}
 .db {display: block;}
 .dib {display: inline-block;}
@@ -875,7 +876,7 @@ ul.manage li {
 .br100 {border-radius: 100% !important;}
 .lh {line-height: 0;}
 .lh140 {line-height: 140%;}
-.oh {overflow:hidden;}
+.oh {overflow:hidden;background-color:#FFF;}
 .vm {vertical-align: middle;}
 .vt {vertical-align: top;}
 .ma { margin: 0 auto;}
@@ -1983,7 +1984,8 @@ _:-ms-fullscreen, :root .main {
   width: 100%;
   /*z-index: 5;*/
   background: #FFFFFF;
-  border-top: 1px solid #E2E7ED;
+  border: 1px solid #E2E7ED;
+  /*border-bottom: 1px solid #E2E7ED;*/
 }
 
 .second-bottom-bar {
@@ -2016,11 +2018,12 @@ _:-ms-fullscreen, :root .main {
 }
 
 .amount {
-  width: 100%;
+  width: 60%;
   text-align: center;
   padding: 1.5rem 1rem 1.5rem 1rem;
-  color: #fff;
-  height: 175px;
+  color: #000;
+  height: 135px;
+  display: inline-block;
 }
 
 .scroll-section {
@@ -2043,17 +2046,17 @@ _:-ms-fullscreen, :root .main {
 }
 
 .avatar-name {
-  position: relative;
-  padding-top: 10px;
-  background-color: #fff;
+  display: inline-block;
+  width: 20%;
+  padding: 30px 155px;
 }
 
 .walletHome .avatar-wallet {
   padding: 0.5rem;
   width: 75px;
   height: 75px;
-  position: absolute;
-  top: -22px;
+  /*position: absolute;
+  top: -22px;*/
   font-size: 2.2rem;
   border: 3px solid #fff;
   background: #1ABC9C;
@@ -2080,8 +2083,8 @@ _:-ms-fullscreen, :root .main {
   padding: 15px 17px;
   border-radius: 100%;
   top: inherit;
-  right: 15px;
-  bottom: 45px;
+  right: 210px;
+  bottom: 43px;
   line-height: 12px;
 }
 
