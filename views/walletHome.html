@@ -3,7 +3,7 @@
   ng-include="'views/includes/topbar.html'"
   ng-init="showPreferences = true">
 </div>
-
+<div ng-include="'views/includes/menu.html'" ng-show="!index.noFocusedWallet"></div>
 <div ng-controller="walletHomeController as home">
   <div class="row columns m20tp" ng-show="index.noFocusedWallet">
     <div class="text-center text-warning m20b">
@@ -517,4 +517,4 @@
   </div>
 </div>
 <div class="extra-margin-bottom"></div>
-<div ng-include="'views/includes/menu.html'" ng-show="!index.noFocusedWallet"></div>
+<!--div ng-include="'views/includes/menu.html'" ng-show="!index.noFocusedWallet"></div-->
