@@ -117,6 +117,70 @@
           <qr-scanner on-scan="home.onQrCodeScanned(data)"></qr-scanner> 
         </div>
       </div> <!-- oh -->
+      
+      <div class="row">
+        <div class="transaction-box">
+            <ul class="transaction-list">
+                <li>
+                  <ul class="innr-list">
+                    <li>Activity</li>
+                    <li>Label</li>
+                    <li>Amount</li>
+                    <li>Time</li>
+                    <li>Details</li>
+                  </ul>
+                </li>
+                <li>
+                  <ul class="innr-list">
+                    <li>
+                      <span class="icon"><img src="img/icon1.png"></span>
+                    </li>
+                    <li>Payment to Bob</li>
+                    <li>
+                      <strong>-3 BTC</strong>
+                    </li>
+                    <li>2 Days</li>
+                    <li>
+                      <span class="new-btn">
+                        <a href="#">BlockExplorer</a>
+                      </span>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <ul class="innr-list">
+                    <li>
+                      <span class="icon"><img src="img/icon2.png"></span>
+                    </li>
+                    <li>Received</li>
+                    <li>
+                      <strong>5 BTC</strong>
+                    </li>
+                    <li>6 months</li>
+                    <li>
+                      <span class="new-btn">
+                        <a href="#">BlockExplorer</a>
+                      </span>
+                    </li>
+                  </ul>
+                </li>
+            </ul>
+            
+            <span class="big-btn">
+              <a href="">BlockExplorer Search</a>
+            </span>
+        </div>
+        
+        
+        <div class="feedback-box">
+          <p>Feedback and support links<br/> Social Media Integration</p>
+        </div>
+        
+      </div>
+      
+      
+      
+      
 
 
       <div class="m20t" ng-show="index.notAuthorized && ! index.anyOnGoingProcess">
@@ -154,9 +218,10 @@
       </div>
 
       <!-- Activity -->
+      
+      
 
-      <div 
-          class="m20t text-gray size-12 text-center" 
+      <div class="m20t text-gray size-12 text-center" 
           ng-show="!index.loadingWallet && !index.txHistory[0] && !index.updatingTxHistory[index.walletId] &&
           !index.txHistoryError && !index.updateError" translate>
         No transactions yet
@@ -281,7 +346,6 @@
 
     -->
     <div id="receive" class="receive tab-view">
-
       <div ng-show="index.needsBackup" class="p60t columns text-center">
         <div class="circle-icon">
           <i class="fi-alert size-48"></i>

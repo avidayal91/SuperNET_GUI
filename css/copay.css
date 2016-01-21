@@ -542,6 +542,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill, inpu
 .page, .main {
   height:100%;
   background-color: #F6F7F9;
+  overflow:auto;
 }
 
 .button.small.side-bar {
@@ -2020,9 +2021,9 @@ _:-ms-fullscreen, :root .main {
 .amount {
   width: 60%;
   text-align: center;
-  padding: 1.5rem 1rem 1.5rem 1rem;
+  padding: 1rem;
   color: #000;
-  height: 135px;
+  height: 105px;
   display: inline-block;
 }
 
@@ -2048,7 +2049,7 @@ _:-ms-fullscreen, :root .main {
 .avatar-name {
   display: inline-block;
   width: 20%;
-  padding: 30px 155px;
+  padding:15px 155px;
 }
 
 .walletHome .avatar-wallet {
@@ -2075,18 +2076,19 @@ _:-ms-fullscreen, :root .main {
 }
 
 .camera-icon a {
-  background: #4B6178;
-  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.50);
-  color: #fff;
+ 
+  color:#333;
   display: block;
   position: absolute;
-  padding: 15px 17px;
+  padding:0 0;
   border-radius: 100%;
   top: inherit;
   right: 210px;
-  bottom: 43px;
+  bottom:25px;
   line-height: 12px;
 }
+
+.camera-icon a i{ font-size:58px;}
 
 .send .camera-icon a {
   top: inherit;
@@ -2643,16 +2645,19 @@ textarea:focus
   bottom: 37px;*/
   overflow: auto;
   padding-bottom: 40px;
+  display:none;
 }
 
 .tab-in {
   -webkit-transform: translate3d(0, 0, 0) !important;
   transform: translate3d(0, 0, 0) !important;
+  display:block;
 }
 
 .tab-out {
   -webkit-transform: translate3d(-100%, 0, 0) !important;
   transform: translate3d(-100%, 0, 0) !important;
+  display:block;
 }
 
 .create-tab {
@@ -2693,3 +2698,27 @@ textarea:focus
 /* removes 300ms in IE */
 -ms-touch-action: manipulation; /* IE10 /
 touch-action: manipulation; /* IE11+ */
+
+
+/*----- Custom Css ----*/
+
+
+.transaction-box { float: left; width: 100%;}
+.transaction-box ul.transaction-list{ float:left; width:100%; margin: 50px 0 0; list-style:none; border:1px solid #333; min-height:250px;}
+.transaction-box ul.transaction-list > li{ float:left; width:100%; border-bottom:1px solid #333;}
+.transaction-box ul.transaction-list > li + li{ background:#EBEBEB;}
+.transaction-box ul.transaction-list > li + li + li{ margin-top:5px; border-top:1px solid #333;}
+.transaction-box ul.transaction-list > li ul.innr-list{ float:left; width:100%; list-style:none;}
+.transaction-box ul.transaction-list > li ul.innr-list > li{ float:left; width:15%; padding:6px 0;}
+.transaction-box ul.transaction-list > li:first-child ul.innr-list > li:last-child { padding-right:40px;}
+.transaction-box ul.transaction-list > li ul.innr-list > li:last-child { text-align: right; width: 35%;}
+.transaction-box ul.transaction-list > li + li ul.innr-list > li{ padding:12px 0;}
+.transaction-box ul.transaction-list > li + li ul.innr-list > li span.new-btn a{ background:#3d8af7; border:1px solid #333; border-radius:10px; padding:5px 20px; color:#fff;}
+
+.transaction-box span.big-btn{ float:left; width:100%; text-align:center; margin-top:-18px;}
+.transaction-box span.big-btn a{ float:none; display:inline-block; background:#3d8af7; border:1px solid #333; border-radius:10px; padding:5px 80px; color:#fff;}
+
+
+
+.feedback-box{ float:left; width:100%; margin:40px 0 0; list-style:none; border:1px solid #333; min-height:200px; padding:10px;}
+
