@@ -428,26 +428,60 @@
 
     -->
     <div id="send" class="send tab-view">
-      <div class="pr p25b">
-        <h4 class="title m0">
-          <available-balance></available-balance>
-          <a 
-            ng-show="!home.lockedCurrentFeePerKb && index.feeToSendMaxStr && index.availableBalanceSat > 0 && !home.blockUx && !home.lockAmount"
-            ng-click="home.sendAll()"
-             translate> Send All
-          </a>
-        </h4>
+      <div class="oh pr bw">
+          <div class="avatar-name columns">
+            <div class="avatar-wallet left"
+              ng-style="{'background-color':index.backgroundColor}">
+              <i class="icon-wallet size-24"></i>
+            </div> 
+          </div>
+        <div class="amount"><!--ng-style="{'background-color':index.backgroundColor}"-->
+          <div ng-if="!index.anyOnGoingProcess && !index.notAuthorized">
+            <div class="m15t" ng-show="index.updateError" ng-click='index.updateAll({triggerTxUpdate: true})'>
+              <span class="size-12 db m10b">{{index.updateError|translate}}</span>
+              <button class="outline white tiny round" translate>Tap to retry</button>
+            </div>
+
+            <div ng-show="index.walletScanStatus == 'error'" ng-click='index.retryScan()'>
+              <span translate>Scan status finished with error</span>
+              <br><span translate>Tap to retry</span>
+            </div>
+
+            <div ng-click='index.updateAll({triggerTxUpdate: true})'  ng-show="!index.updateError && index.walletScanStatus != 'error'">
+              <strong class="size-36">{{index.totalBalanceStr}}</strong>
+              <div class="size-14"
+                ng-if="index.totalBalanceAlternative">
+                {{index.totalBalanceAlternative}} {{index.alternativeIsoCode}}
+              </div>
+              <div class="size-14"
+                ng-if="index.pendingAmount">
+                <span translate>Pending Confirmation</span>:
+                {{index.pendingAmountStr}}
+              </div>
+
+            </div>
+          </div>
+
+          <div ng-if="index.anyOnGoingProcess">
+            <div class="size-36">
+              <strong>...</strong>
+            </div>
+          </div>
+        </div> <!-- amount -->
+        
         <div class="camera-icon" ng-show="index.isComplete">
           <qr-scanner on-scan="home.onQrCodeScanned(data)"></qr-scanner> 
         </div>
-      </div>
+      </div> <!-- oh -->
+      
       <div class="box-notification m20t" ng-show="home.error" ng-click="home.resetError()">
         <span class="text-warning">
           {{home.error|translate}}
         </span>
       </div>
       <div class="row m20t">
-        <div class="large-12 large-centered columns"> 
+        <div class="large-12 large-centered columns">
+          <h3>From: 3PHUShzGnw6m3QcicopJBfbrZ6PStpsPZy <span clss="close"><a href="#"><img src="img/close.png"></a></span></h3> 
           <form name="sendForm" ng-submit="home.submitForm()" ng-disabled="home.blockUx || home.onGoingProcess" novalidate> 
 
             <div ng-hide="home._paypro || home.hideAddress">

@@ -1322,7 +1322,7 @@ a.button.postfix {
   margin-top: 7px;  
 }
 
-.walletHome .icon-wallet {
+.avatar-name .icon-wallet {
   margin-top: 14px;
 }
 
@@ -2019,7 +2019,7 @@ _:-ms-fullscreen, :root .main {
 }
 
 .amount {
-  width: 60%;
+  width:45%;
   text-align: center;
   padding: 1rem;
   color: #000;
@@ -2049,10 +2049,10 @@ _:-ms-fullscreen, :root .main {
 .avatar-name {
   display: inline-block;
   width: 20%;
-  padding:15px 155px;
+  padding:15px 185px;
 }
 
-.walletHome .avatar-wallet {
+.avatar-name .avatar-wallet {
   padding: 0.5rem;
   width: 75px;
   height: 75px;
@@ -2090,10 +2090,7 @@ _:-ms-fullscreen, :root .main {
 
 .camera-icon a i{ font-size:58px;}
 
-.send .camera-icon a {
-  top: inherit;
-  bottom: 0;
-}
+
 
 .copayers {
   position: relative;
@@ -2657,7 +2654,6 @@ textarea:focus
 .tab-out {
   -webkit-transform: translate3d(-100%, 0, 0) !important;
   transform: translate3d(-100%, 0, 0) !important;
-  display:block;
 }
 
 .create-tab {
@@ -2722,3 +2718,46 @@ touch-action: manipulation; /* IE11+ */
 
 .feedback-box{ float:left; width:100%; margin:40px 0 0; list-style:none; border:1px solid #333; min-height:200px; padding:10px;}
 
+
+.bottom-bar .bottombar-item:first-child { float: right;}
+.bottom-bar .bottombar-item:nth-child(3) { float: left;}
+.bottom-bar .bottombar-item { float: none; display:inline-block;}
+.bottom-bar .bottombar-item span.ng-binding { font-size: 18px;}
+
+
+.send .input input { border: 1px solid #333; border-radius: 10px; height: 50px; line-height: 50px; padding:0 20px; color:#5f5f5f; font-size:15px;}
+.send .input input:placeholder{ color:#5f5f5f;}
+.send .input textarea {
+  border: 1px solid #333;
+  border-radius: 10px;
+  color: #5f5f5f;
+  font-size: 15px;
+  height: 50px;
+  line-height: 23px;
+  padding: 12px 20px;
+}
+.send label { color: #000; font-size: 18px; font-weight: bold; text-transform: none;}
+.send label small { font-size: 15px; font-weight: 400;}
+.send label.postfix, a.postfix {
+  border: medium none;
+  border-radius: 0 2px 2px 0;
+  color: #7a8c9e;
+  font-size: 14px;
+  font-weight: 700;
+  position: absolute;
+  right: 15px;
+  text-transform: uppercase;
+  top: 7px;
+  width: 30px;
+}
+.send .postfix.button, .send .prefix.button { border-radius: 10px; box-shadow: none; font-size: 14px;  font-weight: 500; height: 25px; line-height: 25px; margin-bottom: 0; padding: 0; position: absolute; right: 7px; top: 13px; width: 50px;}
+.send button.expand, .send .button.expand {
+  border: 1px solid #000 !important;
+  font-size: 20px;
+  margin-left: 30%;
+  padding: 12px 0;
+  width: 40%;
+  margin-top:30px;
+}
+.send h3{ color: #afafaf; float: left; font-size: 18px; text-align: right; width: 100%;}
+.send h3 span.close{ float:right;}
