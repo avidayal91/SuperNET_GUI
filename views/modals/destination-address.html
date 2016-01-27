@@ -43,6 +43,14 @@
         </div>
       </div>
     </div>
+    
+    <div class="avatar-name columns">
+            <div class="avatar-wallet left"
+              ng-style="{'background-color':index.backgroundColor}">
+              <i class="icon-wallet size-24"></i>
+            </div> 
+          </div>
+    
     <div ng-show="selectedWalletsOpt">
       <div class="onGoingProcess" ng-if="gettingAddress">
         <div class="onGoingProcess-content" ng-style="{'background-color':'#222'}">
@@ -94,13 +102,27 @@
             </div>
           </div> 
         </li>
-        <li class="p10" ng-show="!editAddressbook">
+        <li class="p10">
+          <h3>Bob<br/><span class="size-12 tu" translate>Bitcoin Address</span></h3>
+          <ul class="controls">
+            <li>
+              <span class="size-12 tu" translate>Copy</span><br/>
+               <a href="#"><i class="fi-page-copy size-24 m20r lh icon"></i></a>
+            </li>
+            <li>
+              <span class="size-12 tu" translate>Remove</span><br/>
+               <a href="#"><i class="fi-minus size-24 m20r lh icon"></i></a>
+            </li>
+          </ul>
+        </li>
+         <li class="p10" ng-show="!editAddressbook">
           <a ng-click="toggleAddAddressbookEntry()" class="p0i">
             <i class="fi-plus size-24 m20r lh icon"></i> 
             <span class="size-12 tu text-bold" translate>Add a new entry</span>
             <span ng-show="!list[newAddress] && newAddress">({{newAddress}})</span>
           </a>
         </li>
+       
       </ul>
 
       <div ng-show="addAddressbookEntry">
