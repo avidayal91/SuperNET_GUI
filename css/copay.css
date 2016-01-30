@@ -385,7 +385,7 @@ h4.title a {
   margin-bottom: 10px;
 }
 
-.preferences .switch {
+.preferences .switch, .options .switch {
   top:-5px !important;
 }
 
@@ -401,14 +401,32 @@ h4.title a {
 }
 
 
-.preferences ul, .modal-content ul {
+.preferences ul, .modal-content ul, .options ul {
   font-size:14px;
+}
+
+.preferences ul, .modal-content ul{
   background: white;
 }
 
-.preferences ul li {
+.preferences ul li, .options ul li {
   padding:13px 20px;
   border-bottom: 1px solid #E9E9EC;
+}
+
+.options ul li{
+    background-color: #ffffff;
+    display: block;
+}
+
+.options ul li.margin_top{
+    margin-top: 15px;
+    border-top: 1px solid #E9E9EC;
+}
+
+.options ul li span.extra_text{
+    color: #aaa;
+    padding-left: 3%;
 }
 
 .addressbook-input {
@@ -1675,7 +1693,7 @@ input.ng-invalid-match, input.ng-invalid-match:focus {
   padding: 1rem 0;
 }
 
-.preferences li {
+.preferences li, .options li {
   cursor: pointer !important;
 }
 
@@ -1928,6 +1946,15 @@ _:-ms-fullscreen, :root .main {
   width: 4.7rem;
   line-height: 2.95rem;
   border-right: none;
+}
+
+.middle-small {
+  font-size: 16px;
+  text-align: center;
+}
+
+.middle-small span{
+  color: #ffffff;
 }
 
 .right-small {
