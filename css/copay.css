@@ -728,7 +728,7 @@ ul.tx-copayers {
 }
 
 .backup .tab-bar {
-  background: #F6F7F9;
+  background: #4a90e2;
   border-bottom: none;
 }
 
@@ -1979,7 +1979,7 @@ _:-ms-fullscreen, :root .main {
 }
 
 .backup .right-small a, .backup .left-small a {
-  color: #7A8C9E;
+  color: #fff;
 }
 
 .tab-bar .icon-back {
@@ -2180,6 +2180,7 @@ a.missing-copayers {
   margin-right: 15px;
   float: left;
   display: block;
+  height:30px;
 }
 
 .sidebar li {
@@ -2752,9 +2753,9 @@ touch-action: manipulation; /* IE11+ */
 .bottom-bar .bottombar-item span.ng-binding { font-size: 18px;}
 
 
-.send .input input { border: 1px solid #333; border-radius: 10px; height: 50px; line-height: 50px; padding:0 20px; color:#5f5f5f; font-size:15px;}
-.send .input input:placeholder{ color:#5f5f5f;}
-.send .input textarea {
+.send .input input, .backup .input input { border: 1px solid #333; border-radius: 10px; height: 50px; line-height: 50px; padding:0 20px; color:#5f5f5f; font-size:15px;}
+.send .input input:placeholder, .backup .input input:placeholder{ color:#5f5f5f;}
+.send .input textarea, .backup .input textarea {
   border: 1px solid #333;
   border-radius: 10px;
   color: #5f5f5f;
@@ -2763,9 +2764,9 @@ touch-action: manipulation; /* IE11+ */
   line-height: 23px;
   padding: 12px 20px;
 }
-.send label { color: #000; font-size: 18px; font-weight: bold; text-transform: none;}
-.send label small { font-size: 15px; font-weight: 400;}
-.send label.postfix, a.postfix {
+.send label, .backup label { color: #000; font-size: 18px; font-weight: bold; text-transform: none;}
+.send label small, .backup label small { font-size: 15px; font-weight: 400;}
+.send label.postfix, a.postfix, .backup label.postfix {
   border: medium none;
   border-radius: 0 2px 2px 0;
   color: #7a8c9e;
@@ -2777,8 +2778,8 @@ touch-action: manipulation; /* IE11+ */
   top: 7px;
   width: 30px;
 }
-.send .postfix.button, .send .prefix.button { border-radius: 10px; box-shadow: none; font-size: 14px;  font-weight: 500; height: 25px; line-height: 25px; margin-bottom: 0; padding: 0; position: absolute; right: 7px; top: 13px; width: 50px;}
-.send button.expand, .send .button.expand {
+.send .postfix.button, .send .prefix.button, .backup .postfix.button, .backup .prefix.button { border-radius: 10px; box-shadow: none; font-size: 14px;  font-weight: 500; height: 25px; line-height: 25px; margin-bottom: 0; padding: 0; position: absolute; right: 7px; top: 13px; width: 50px;}
+.send button.expand, .send .button.expand, .backup button.expand, .backup .button.expand {
   border: 1px solid #000 !important;
   font-size: 20px;
   margin-left: 30%;
@@ -2788,3 +2789,58 @@ touch-action: manipulation; /* IE11+ */
 }
 .send h3{ color: #afafaf; float: left; font-size: 18px; text-align: right; width: 100%;}
 .send h3 span.close{ float:right;}
+
+.preferences ul li + li, .modal-content ul li + li{ border-top:none;}
+.modal-content ul{ float:left; width:100%;}
+.modal-content ul li{ float:left; width:100%; border:1px solid #333;}
+.modal-content ul li span{ text-transform:none; font-size:14px; font-weight:normal; color:#a5b2bf}
+.modal-content ul li a i{ color:#333;}
+.modal-content ul li span strong{ color:#333; font-size:15px;}
+.modal-content ul li h3 { float: left; font-size: 19px; font-weight: bold; line-height: 20px; padding-left: 54px;}
+.modal-content ul li h3 span{ color:#a5b2bf;}
+.modal-content ul li ul{ width:auto;}
+.modal-content ul li ul li{ width:auto; border:none; border:none;}
+.modal-content ul li ul.controls{ float:right;}
+.modal-content ul li ul.controls li { text-align: center; width: 75px;}
+.modal-content ul li ul.controls li a {
+  display: inline-block;
+  float: none;
+  padding: 0;
+}
+.modal-content ul li ul.controls li a i {
+  margin-right: 0;
+}
+.modal-content .avatar-name, .backup .avatar-name{ float:left; width:100%; text-align:center;}
+.modal-content .avatar-name .avatar-wallet, .backup .avatar-name .avatar-wallet {
+  float:none !important;
+  display:inline-block;
+  background: #4a90e2 none repeat scroll 0 0 !important;
+  border: 3px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 700;
+  height: 75px;
+  margin: 0;
+  padding: 0.5rem;
+  text-align: center;
+  width: 75px;
+}
+
+.receive h1 { color: #333; font-size: 25px;}
+.receive .square-icon{ padding-bottom:15px;}
+.receive .postfix.button, .receive .prefix.button { border-radius: 10px; box-shadow: none; font-size: 14px;  font-weight: 500; height: 25px; line-height: 25px; margin-bottom: 0; padding: 0; position: absolute; right: 7px; top: 13px; width: 50px;}
+.receive button.expand, .receive .button.expand {
+  font-size: 20px;
+  padding: 12px 0;
+  width: 40%;
+  margin-top:30px;
+  text-transform:none;
+}
+.receive h5{ font-size:14px; color:#333; font-weight:normal;}
+.receive h6{ border-bottom:2px solid #ccc; padding-bottom:8px;}
+.receive .p60t { margin-top: -95px; padding-top: 0;}
+
+.backup .content{ top:160px;}
+.backup .button-box{ position:static;}
+.backup button.expand, .backup .button.expand{ width:100%; margin:0 0;}

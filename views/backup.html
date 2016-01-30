@@ -1,24 +1,67 @@
 <div class="backup" ng-controller="backupController as wordsC">
-  <nav class="tab-bar">
-    <section class="left-small" ng-show="(wordsC.step != 1 && wordsC.step != 4)">
-      <a ng-click="wordsC.goToStep(1);">
-        <i class="icon-arrow-left3 icon-back"></i>
+  <nav class="tab-bar" ng-style="{'background-color':color}">
+    <section class="left-small">
+      <a class="p10" ng-click="$root.go(index.prevState);">
+        <span class="text-close" translate>Close</span>
       </a>
     </section>
 
     <section class="middle tab-bar-section">
+      <h1 class="title ellipsis">
+        Receive Specific Amount
+      </h1>
     </section>
-
-    <section class="right-small">
-      <a class="p10" ng-click="$root.go(index.prevState);">
-        <span class="text-close">
-          <i class="fi-x size-24"></i>
-        </span>
-      </a>
-    </section>
+    
   </nav>
+  
+  
+  <div class="avatar-name columns">
+            <div class="avatar-wallet left"
+              ng-style="{'background-color':index.backgroundColor}">
+              <i class="icon-wallet size-24"></i>
+            </div> 
+          </div>
+          
+          
+          <div class="row m20t">
+        <div class="large-12 large-centered columns"> 
+          <form name="receiveForm" ng-submit="home.submitForm()" ng-disabled="home.blockUx || home.onGoingProcess" novalidate> 
 
-  <div class="content preferences">
+            
+            <div class="row" ng-init="home.hideAlternative()" ng-hide="home.hideAmount">
+              <div class="large-12 medium-12 columns">
+                
+                <div ng-if="!home.canShowAlternative()">
+                  <label for="amount">
+                    <span translate>Amount</span>
+                  </label>
+                  <div class="input">
+                    <input type="number" id="amount" ng-disabled="home.blockUx || home.lockAmount" name="amount" ng-attr-placeholder="{{'Amount in'|translate}} {{home.unitName}}" ng-minlength="0.00000001" ng-maxlength="10000000000" ng-model="_amount" valid-amount required autocomplete="off" ng-focus="home.formFocus('amount')" ng-blur="home.formFocus(false)">
+                    <input type="number" id="alternative"  name="alternative"  ng-model="_alternative" style="display:none">
+                    <a class="postfix button" ng-style="{'background-color':index.backgroundColor}" ng-click="home.showAlternative()">BTC</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+
+            <div class="row" ng-show="!home.onGoingProcess">
+              <div class="large-6 medium-6 small-6 columns" ng-show="!home.blockUx && (home._paypro || home.lockAddress || home.lockAmount)">
+                <a ng-click="home.resetForm(sendForm)" class="button expand outline dark-gray round" translate>Cancel</a>
+              </div>
+              <div class="columns" ng-class="{'small-6 medium-6 large-6':(home._paypro || home.lockAddress || home.lockAmount)}">
+                <button type="submit" class="button black round expand" ng-disabled="sendForm.$invalid || home.blockUx ||  index.isOffline"
+                  ng-style="{'background-color':index.backgroundColor}"  translate>
+                   Generate A QR Code
+                </button>
+              </div>
+
+            </div>
+          </form>
+        </div>
+      </div>
+
+  <div class="content preferences" style="display:none;">
     <div class="box-notification" ng-show="wordsC.error">
       <span class="text-warning">
         {{wordsC.error|translate}}

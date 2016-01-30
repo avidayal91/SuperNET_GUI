@@ -346,17 +346,25 @@
 
     -->
     <div id="receive" class="receive tab-view">
+      <div class="avatar-name columns">
+            <div class="avatar-wallet left"
+              ng-style="{'background-color':index.backgroundColor}">
+              <i class="icon-wallet size-24"></i>
+            </div> 
+          </div>
       <div ng-show="index.needsBackup" class="p60t columns text-center">
-        <div class="circle-icon">
-          <i class="fi-alert size-48"></i>
+        <h1>My Bitcoin address</h1>
+        <div class="square-icon">
+          <span class="barcode-img"><img src="img/bar-code-img.png"></span>
         </div>
-        <h5 translate>Backup Needed</h5>
+        <h5 translate>3NQzivqeBofKCBBCnXzqMGhSsxQePQ8yBa</h5>
+        <h6><a href="#">Generate new address</a></h6>
         <p class="text-gray m20b columns" translate>
-          Before receiving funds, it is highly recommended you backup your wallet. If you lose this device, it is impossible to access your funds without a backup.
+          Share this wallet address to receive payments. To protect your privacy, new addresses are generated automatically once you use them.
         </p>
         <button class="m20t button black expand round"
           ng-click="$root.go('backup')" ng-style="{'background-color':index.backgroundColor}" >
-          <span translate>Backup now</span>
+          <span translate>Request A Specific Amount</span>
       </button>
       </div>
       <div ng-show="!index.needsBackup">
@@ -428,7 +436,7 @@
 
     -->
     <div id="send" class="send tab-view">
-      <div class="oh pr bw">
+       <div class="oh pr bw">
           <div class="avatar-name columns">
             <div class="avatar-wallet left"
               ng-style="{'background-color':index.backgroundColor}">
