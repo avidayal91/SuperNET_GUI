@@ -3,8 +3,8 @@
   ng-include="'views/includes/topbar.html'"
   ng-init="titleSection='Advanced'; goBackToState = 'preferences'">
 </div>
-
-<div class="content preferences" ng-controller="preferencesAdvancedController as preferences">
+<!-- 30 jan 2016 -->
+<div class="content preferences advanced" ng-controller="preferencesAdvancedController as preferences">
 
   <h4></h4>
   
@@ -38,6 +38,10 @@
     <li ng-click="$root.go('delete')">
       <i class="icon-arrow-right3 size-24 right text-gray"></i>
       <div translate>Delete Wallet</div>
+    </li>
+    <li ng-click="">
+      <i class="icon-arrow-right3 size-24 right text-gray"></i>
+      <div translate>Peer Management</div>
     </li>
 
   </ul>
