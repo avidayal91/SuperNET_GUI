@@ -4,7 +4,7 @@
   ng-init="titleSection='Wallet Information'; goBackToState = 'preferencesAdvanced'">
 </div>
 
-<div class="content preferences" ng-controller="preferencesInformation as info" ng-init="info.init()">
+<div class="content preferences advanced" ng-controller="preferencesInformation as info" ng-init="info.init()">
     <h4 class="title m0" translate>Wallet Information</h4>
 
     <ul class="no-bullet m0 size-14">
@@ -114,8 +114,34 @@
           </div>
         </li>
       </ul>
-      <div class="text-centered text-gray size-12 m10" translate>
-        Only Main (not change) addresses are shown. The addresses on this list were not verified locally at this time.
+      <div class="text-centered space text-gray size-12" translate>
+        Only Main (not change) addresses are shown.<br/> 
+        <h4 class="title m0" translate>Balance By Addresses</h4>
+        <!--The addresses on this list were not verified locally at this time.-->
+        <ul class="no-bullet m0">
+        <li class="oh ng-scope">
+          <div class="small-8 columns enable_text_select text-black ellipsis ng-binding">
+             3KGdS7YJNx8HM5m7mXWW63ZMhGtjqgxE4i<br/>
+            <span class="text-gray text-right">0.34931002 BTC</span>
+          </div>
+          <div class="text-gray size-12 right enable_text_select">
+            <span class="new-btn">
+              <a href="#">Send from this address</a>
+            </span>
+          </div>
+        </li>
+        <li class="oh ng-scope">
+          <div class="small-8 columns enable_text_select text-black ellipsis ng-binding">
+            3KGdS7YJNx8HM5m7mXWW63ZMhGtjqgxE4i<br/>
+            <span class="text-gray text-right">0.34931002 BTC</span>
+          </div>
+          <div class="text-gray size-12 right enable_text_select">
+            <span class="new-btn">
+              <a href="#">Send from this address</a>
+            </span>
+          </div>
+        </li>
+      </ul>
       </div>
 
       <ul class="no-bullet m0">
