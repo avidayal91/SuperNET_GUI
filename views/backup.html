@@ -14,7 +14,6 @@
     
   </nav>
   
-  
   <div class="avatar-name columns">
             <div class="avatar-wallet left"
               ng-style="{'background-color':index.backgroundColor}">
@@ -147,19 +146,24 @@
         </button>
       </div>
     </div>
-
+  
+  
     <!--
     ## STEP 2
     -->
 
-    <div ng-show="wordsC.step == 2">
+    <div>
       <div class="columns text-center extra-padding-bottom">
         <h5 translate>Confirm your wallet seed</h5>
         <p class="text-gray m0" translate>
           Please tap the words in order to confirm your backup phrase is correctly written.
         </p>
         <div class="panel words text-left" ng-class="{'enable_text_select': index.network == 'testnet'}">
-          <div id="addWord"></div>
+          <div id="addWord">
+              <span ng-repeat="word in wordsC.choosenMnemonicWords | limitTo: 3">
+                <button class="button radius tiny words">{{word}}</button>
+              </span>
+          </div>
         </div>
         <div class="text-left" ng-class="{'enable_text_select': index.network == 'testnet'}" id="buttons">
           <span ng-repeat="word in wordsC.shuffledMnemonicWords track by $index">
@@ -180,7 +184,10 @@
       </div>
     </div>
 
-    <!--
+</div>
+<div class="extra-margin-bottom"></div>
+
+<!--
     ## STEP 3
     -->
 
@@ -268,5 +275,3 @@
       </div>
     </div>
   </div>
-</div>
-<div class="extra-margin-bottom"></div>
