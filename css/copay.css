@@ -419,6 +419,11 @@ h4.title a {
     display: block;
 }
 
+.options p.footer_p{
+    margin: 10px;
+    font-size: 0.8rem;
+}
+
 .options ul li.margin_top{
     margin-top: 15px;
     border-top: 1px solid #E9E9EC;
