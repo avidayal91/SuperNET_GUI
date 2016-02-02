@@ -367,7 +367,7 @@
           <span translate>Request A Specific Amount</span>
       </button>
       </div>
-      <div ng-show="!index.needsBackup">
+      <div ng-show="!index.needsBackup" class="p60t columns text-center">
         <div class="box-notification m20t" ng-show="home.addrError">
           <span class="text-warning">
             {{home.addrError|translate}}
@@ -391,22 +391,22 @@
                 </div>
               </div>
               <div class="m10t" >
-                <h4 ng-class="{'enable_text_select': !index.isCordova}" class="size-12">
+                <h5 ng-class="{'enable_text_select': !index.isCordova}" class="size-12">
                   {{home.generatingAddress ? '...' : home.addr[index.walletId]}}
 
-                </h4>
+                </h5>
               </div>
             </div>
-            <div class="text-center m20b size-12 text-gray">
-              <a ng-click="home.setAddress(true)"
+            <div class="text-center size-12 text-gray">
+              <h6><a ng-click="home.setAddress(true)"
                  ng-disabled="home.blockUx || index.isOffline ||home.generatingAddress" translate>
                 Generate new address
-              </a>
+              </a></h6>
             </div>
 
             <div ng-show="home.addr[index.walletId]">
-              <div class="line-t size-10 text-gray m10b" translate>
-                Share this wallet address to receive payments. To protect your privacy, new addresses are generated automatically once you use them.
+              <div class="size-10 text-gray m10b" translate>
+                <p>Share this wallet address to receive payments. To protect your privacy, new addresses are generated automatically once you use them.</p>
               </div>
             </div>
           </div>
