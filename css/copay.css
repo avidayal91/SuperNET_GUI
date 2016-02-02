@@ -419,11 +419,16 @@ h4.title a {
     display: block;
 }
 
+.options p.footer_p{
+    margin: 10px;
+    font-size: 0.8rem;
+}
+
 .options ul li.margin_top{
     margin-top: 15px;
     border-top: 1px solid #E9E9EC;
 }
-
+t
 .options ul li span.extra_text{
     color: #aaa;
     padding-left: 3%;
@@ -2852,11 +2857,12 @@ touch-action: manipulation; /* IE11+ */
 .blue-bg{ background-color:#3D8AF7 !important;}
 .modal-content .m20b h4{ background:#fff !important; text-transform:none; font-weight:bold; color:#333; font-size:18px;}
 .modal-content .m20b ul li span.right{ color:#333; font-size:18px; text-transform:uppercase;}
-.modal-content .m20b ul li span.right span{ color:#333;}
+.modal-content .m18b ul li span.right span{ color:#333;}
 .modal-content .m20b ul li span.right.ng-binding span{ color:#fff;}
 
 .preferences.advanced ul li{ border:1px solid #333;}
 .preferences.advanced ul li + li{ border-top:none;}
+.preferences.advanced ul + ul li{ border-top:none;}
 .preferences.advanced ul li i { color: #555; font-size: 40px; font-weight: bold; line-height: 20px;}
 .preferences.advanced ul li i.fi-check { margin-top: -10px;}
 .preferences.advanced h4.title { font-size: 14px; padding: 15px 20px;}
@@ -2866,3 +2872,11 @@ touch-action: manipulation; /* IE11+ */
 .preferences.advanced span.new-btn{ float:right;}
 .preferences.advanced span.new-btn a{ background: #3d8af7; border: 1px solid #333; border-radius: 10px; color: #fff; padding: 5px 20px; float:right; margin-top:8px;}
 .enable_text_select span{ margin-left:210px;}
+
+.preferences.advanced form.border{ border:1px solid #333;}
+.preferences.advanced form.advanced{ float:none; display:inline-block; width:100%;}
+.preferences.advanced form.advanced label { font-size: 14px; font-weight: bold;}
+.preferences.advanced form.advanced .input input { border-bottom: 2px solid #ccc; color: #555; font-size: 14px; padding-left: 80px;}
+.preferences.advanced button { background-color: #3d8af7 !important;}
+.middle.tab-bar-section h1{ font-weight:bold; font-size:18px;}
+.topbar-container .left-small a span { font-size: 18px;}
