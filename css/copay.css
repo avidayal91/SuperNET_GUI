@@ -419,11 +419,16 @@ h4.title a {
     display: block;
 }
 
+.options p.footer_p{
+    margin: 10px;
+    font-size: 0.8rem;
+}
+
 .options ul li.margin_top{
     margin-top: 15px;
     border-top: 1px solid #E9E9EC;
 }
-
+t
 .options ul li span.extra_text{
     color: #aaa;
     padding-left: 3%;
@@ -2852,7 +2857,7 @@ touch-action: manipulation; /* IE11+ */
 .blue-bg{ background-color:#3D8AF7 !important;}
 .modal-content .m20b h4{ background:#fff !important; text-transform:none; font-weight:bold; color:#333; font-size:18px;}
 .modal-content .m20b ul li span.right{ color:#333; font-size:18px; text-transform:uppercase;}
-.modal-content .m20b ul li span.right span{ color:#333;}
+.modal-content .m18b ul li span.right span{ color:#333;}
 .modal-content .m20b ul li span.right.ng-binding span{ color:#fff;}
 
 .preferences.advanced ul li{ border:1px solid #333;}
