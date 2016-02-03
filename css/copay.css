@@ -732,6 +732,29 @@ ul.tx-copayers {
   border-bottom: none;
 }
 
+.backup-page-content{
+  width: 100%;
+  text-align: center;
+}
+.backup-page-content h1{
+  font-weight: 700;
+  margin-top: 0.7em;
+  font-size: 27px;
+}
+.backup-page-content .column{
+  margin-top: 3em;
+}
+.wallet-seed-tab{
+  max-width: 407px;
+  margin: auto;
+  margin-top: 1.2em;
+  padding: 10px 30px;
+  border: 1px solid black;
+  background-color: #fefefe;
+  text-align: left;
+  color: black;
+}
+
 .button-box {
   position: fixed;
   bottom: 0;
