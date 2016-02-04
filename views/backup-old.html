@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" type="text/css" href="../../stacksavings/css/foundation.css">
+  <link rel="stylesheet" type="text/css" href="../../stacksavings/icons1/foundation-icons.css">
+  <link rel="stylesheet" type="text/css" href="../../stacksavings/css/copay.css">
+  <title>Copay - Multisignature Wallet</title>
+  <link rel="shortcut icon" href="../../stacksavings/img/favicon.ico">
+</head>
+<body ng-cloak class="ng-cloak">
+
+  <div class="page" 
+    ng-controller="indexController as index" 
+    ng-swipe-disable-mouse 
+    ng-swipe-left="index.closeMenu()"
+    ng-swipe-right="index.openMenu()">
+
+    <div class="off-canvas-wrap" id="off-canvas-wrap">
+      <div class="inner-wrap">
+        <div ng-include="'./includes/sidebar.html'" ng-if="index.hasProfile"></div>
+
+        <div notifications="right top"></div> 
+        <div ng-include="'./includes/password.html'" ng-if="index.askPassword"></div>
+        <div ng-include="'./includes/alert.html'" ng-if="index.showAlert"></div>
+        <div id="sectionContainer">
+          <div id="mainSection">
+            <div class="backup" ng-controller="backupController as wordsC">
+  <nav class="tab-bar" ng-style="{'background-color':color}">
+    <section class="left-small">
+      <a class="p10" ng-click="$root.go(index.prevState);">
+        <span class="text-close" translate>Close</span>
+      </a>
+    </section>
+
+    <section class="middle tab-bar-section">
+      <h1 class="title ellipsis">
+        Receive Specific Amount
+      </h1>
+    </section>
+    
+  </nav>
+  
+  
+           <div ng-show="wordsC.step == 2">
+      <div class="columns text-center extra-padding-bottom">
+        <h5 translate>Confirm your wallet seed</h5>
+        <p class="text-gray m0" translate>
+          Please tap the words in order to confirm your backup phrase is correctly written.
+        </p>
+        <div class="panel words text-left" ng-class="{'enable_text_select': index.network == 'testnet'}">
+          <div id="addWord"></div>
+        </div>
+        <div class="text-left" ng-class="{'enable_text_select': index.network == 'testnet'}" id="buttons">
+          <span ng-repeat="word in wordsC.shuffledMnemonicWords track by $index">
+            <button class="button radius tiny words" ng-if="$index > 9" ng-click="wordsC.disableButton($index, word)" id="{{$index + word}}">{{word}}</button>
+            <button class="button radius tiny words" ng-if="$index <= 9" ng-click="wordsC.disableButton('0' + $index, word)" id="{{'0' + $index + word}}">{{word}}</button>
+          </span>
+        </div>
+      </div>
+
+      <div class="button-box">
+        <button
+          ng-disabled="!wordsC.selectComplete"
+          class="round expand m0"
+          ng-style="{'background-color':index.backgroundColor}"
+          ng-click="wordsC.goToStep(3);"
+          translate>Continue
+        </button>
+      </div>
+    </div>
+          </div>
+          </div>
+        </div>
+        <a class="close-menu" ng-click="index.closeMenu()"></a>
+
+      </div>
+    </div>
+  </div>
+  
+  <script src="../../stacksavings/lib/angular.js"></script>
+
+  <!-- DO NOT DELETE THIS COMMET  -->
+  <!-- PLACEHOLDER: CORDOVA SRIPT -->
+
+  <script src="../../stacksavings/js/copay.js"></script>
+
+</body>
+</html>

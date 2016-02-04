@@ -15,6 +15,12 @@
       <span class="text-close">{{'Close'|translate}}</span>
     </a>
   </section>
+  
+  <section class="middle tab-bar-section">
+    <h1 class="title ellipsis">
+      {{(titleSection|translate) || (index.alias || index.walletName)}}
+    </h1>
+  </section>
 
   <section class="right-right" ng-show="showPreferences && !index.noFocusedWallet">
       <a class="p10" ng-click="topbar.goPreferences()">
@@ -27,9 +33,5 @@
       </a>
   </section>
 
-  <!--section class="middle tab-bar-section">
-    <h1 class="title ellipsis">
-      {{(titleSection|translate) || (index.alias || index.walletName)}}
-    </h1>
-  </section-->
+  
 </nav>
