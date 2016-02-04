@@ -2880,3 +2880,18 @@ touch-action: manipulation; /* IE11+ */
 .preferences.advanced button { background-color: #3d8af7 !important;}
 .middle.tab-bar-section h1{ font-weight:bold; font-size:18px;}
 .topbar-container .left-small a span { font-size: 18px;}
+
+
+
+
+
+
+/*----- Mukesh(03-Jan-2016)-------*/
+
+.preferences.advanced form.advanced .avatar-name{ padding:0 80px; margin-top:-15px;}
+.preferences.advanced form.advanced button.medium{ width:60%;}
+.preferences.advanced form.sweep label { font-size: 16px; font-weight: bold;}
+.preferences.advanced form.sweep .input{ position:relative;}
+.preferences.advanced form.sweep .input input{ padding-top:0; padding-left:20px;}
+.preferences.advanced form.sweep .input .qr-scanner-input i{ font-size:50px; color:#333;}
+.preferences.advanced form.sweep .input .qr-scanner-input{ top:auto; bottom:5px;}
