@@ -122,6 +122,15 @@ angular
           }
         }
       })
+      .state('logIn', {
+        url: '/login',
+        needProfile: false,
+        views: {
+          'main': {
+            templateUrl: 'views/logIn.html',
+          }
+        }
+      })
       .state('walletHome', {
         url: '/',
         walletShouldBeComplete: true,
